@@ -21,9 +21,9 @@ RUN cd /tmp \
 
 # Compile libtorrent
 RUN cd /tmp \
-	&& curl -L http://rtorrent.net/downloads/libtorrent-0.13.6.tar.gz -o libtorrent.tar.gz \
+	&& curl -L http://rtorrent.net/downloads/libtorrent-0.13.4.tar.gz -o libtorrent.tar.gz \
 	&& tar -zxvf libtorrent.tar.gz \
-	&& cd libtorrent-0.13.6 \
+	&& cd libtorrent-0.13.4 \
 	&& ./autogen.sh \
 	&& ./configure \
 	&& make \
@@ -32,9 +32,9 @@ RUN cd /tmp \
 
 # Compile rtorrent
 RUN cd /tmp \
-	&& curl -L http://rtorrent.net/downloads/rtorrent-0.9.6.tar.gz -o rtorrent.tar.gz \
+	&& curl -L http://rtorrent.net/downloads/rtorrent-0.9.4.tar.gz -o rtorrent.tar.gz \
 	&& tar -zxvf rtorrent.tar.gz \
-	&& cd rtorrent-0.9.6 \
+	&& cd rtorrent-0.9.4 \
 	&& ./autogen.sh \
 	&& ./configure --with-xmlrpc-c \
 	&& make \
@@ -48,8 +48,8 @@ RUN cd /tmp \
 
 # Install Rutorrent
 RUN cd /tmp \
-	&& curl -L http://dl.bintray.com/novik65/generic/rutorrent-3.6.tar.gz -o rutorrent-3.6.tar.gz \
-	&& tar -zxvf rutorrent-3.6.tar.gz \
+	&& curl -L http://dl.bintray.com/novik65/generic/rutorrent-3.8.tar.gz -o rutorrent-3.8.tar.gz \
+	&& tar -zxvf rutorrent-3.8.tar.gz \
 	&& rm -f /var/www/html/index.html \
 	&& mv -f rutorrent/* /var/www/html/ \
 	&& chown -R www-data.www-data /var/www/html/* \
