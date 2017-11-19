@@ -48,8 +48,8 @@ RUN cd /tmp \
 
 # Install Rutorrent
 RUN cd /tmp \
-	&& curl -L http://dl.bintray.com/novik65/generic/rutorrent-3.8.tar.gz -o rutorrent-3.8.tar.gz \
-	&& tar -zxvf rutorrent-3.8.tar.gz \
+	&& curl -L http://dl.bintray.com/novik65/generic/rutorrent-3.7.tar.gz -o rutorrent-3.7.tar.gz \
+	&& tar -zxvf rutorrent-3.7.tar.gz \
 	&& rm -f /var/www/html/index.html \
 	&& mv -f rutorrent/* /var/www/html/ \
 	&& chown -R www-data.www-data /var/www/html/* \
